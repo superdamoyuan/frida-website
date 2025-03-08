@@ -15,7 +15,7 @@ Clone **[this repo](https://github.com/oleavr/frida-agent-example)** to get star
 1. **Runtime information**
     1. [Frida](#frida)
     1. [Script](#script)
-1. **Process, Thread, Module and Memory**
+1. **Process(进程), Thread(线程), Module and Memory(模块和内存)**
     1. [Thread](#thread)
     1. [Process](#process)
     1. [Module](#module)
