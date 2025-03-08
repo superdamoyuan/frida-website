@@ -46,23 +46,6 @@ jobs:
     steps:
       - name: Check out repo
         uses: actions/checkout@v3
-      - name: Configure AWS credentials
-        uses: aws-actions/configure-aws-credentials@v1
-        with:
-          aws-access-key-id: ${{ secrets.S3_ACCESS_KEY }}
-          aws-secret-access-key: ${{ secrets.S3_SECRET_KEY }}
-          aws-region: us-east-1
-      - name: Configure Cloudflare credentials
-        run: |
-          (
-            echo "defaults:"
-            echo "    domain: frida.re"
-            echo "    email: ${{ secrets.CF_EMAIL }}"
-            echo "    token: ${{ secrets.CF_TOKEN }}"
-          ) > ~/.cfcli.yml
-        shell: bash
-      - name: Install cloudflare-cli
-        run: npm install -g cloudflare-cli
       - name: Download site
         uses: actions/download-artifact@v4
         with:
